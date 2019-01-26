@@ -9,9 +9,23 @@ services:
   web:
     build: .
     command: bash -c "rm -f /app/tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: webpack-dev-server
+      WEBPACKER_DEV_SERVER_PUBLIC: webpack-dev-server:3035
     volumes:
       - .:/myapp
     ports:
       - '3000:3000'
     depends_on:
       - db
+      - webpack-dev-server
+  webpack-dev-server:
+    build: .
+    command: ./bin/webpack-dev-server
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+      WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
+    volumes:
+      - .:/myapp
+    ports:
+      - '3035:3035'
