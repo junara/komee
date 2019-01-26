@@ -1,0 +1,17 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.5.3
+  Exclude:
+  - 'config/**/*'
+  - 'vendor/**/*'
+  - 'tmp/**/*'
+  - 'db/**/*'
+  - 'node_modules/**/*'
+  - 'bin/**/*'
+
+AsciiComments:
+  Enabled: false
+
+Documentation:
+  Enabled: false
