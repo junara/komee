@@ -16,8 +16,11 @@ COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install
 
+COPY package.json /myapp/package.json
+COPY yarn.lock /myapp/yarn.lock
+
+RUN yarn install -f
 COPY . /myapp
-RUN yarn install
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
