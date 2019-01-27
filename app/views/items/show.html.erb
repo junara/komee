@@ -1,0 +1,16 @@
+<figure class="container image">
+  <% if @item.image.attached? %>
+    <%= image_tag @item.resize_image(500, nil).processed %>
+  <% end %>
+</figure>
+<div>
+  <%= @item.content %>
+</div>
+<div class="columns">
+  <div class="column">
+    <%= link_to '編集', edit_item_path(@item), class: 'button is-primary is-large column' %>
+  </div>
+</div>
+<div class="column">
+  <%= link_to '削除', item_path(@item), method: :delete, class: 'button is-danger is-large column' %>
+</div>

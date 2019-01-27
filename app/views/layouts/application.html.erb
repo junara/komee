@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pm</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pm</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<header>
+  <nav class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-start">
+        <div class="navbar-brand">
+          <%= link_to root_path do %>
+            <div class="is-size-1 has-text-weight-bold">
+              KOMEE
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <%= link_to '一覧', items_path, class: 'button is-large column' %>
+            <%= link_to '新規作成', new_item_path, class: 'button is-primary is-large' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
 </html>

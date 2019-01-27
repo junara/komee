@@ -1,0 +1,8 @@
+.columns.is-multiline
+  - @items.each do |item|
+    .column.is-4.is-12-mobile
+      = link_to item_path(item) do
+        - if item.image.attached?
+          = image_tag item.resize_image(300, nil).processed
+        - else
+          = item.message

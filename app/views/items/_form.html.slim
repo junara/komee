@@ -1,0 +1,22 @@
+.content
+  = form_with model: form, local: true do |f|
+    .field
+      .label ふきだしコメント
+      .control
+        = f.text_field :message, placeholder: 'ぼくげんきだよ！', class: 'input', autocomplete: "off"
+        p.help.is-success 最大20文字
+    .field
+      .label 写真
+      .control
+        = f.file_field :image
+        p.help.is-success ふきだしをつけたい写真（プレビューはされません）
+      - if @item.image.present?
+        = image_tag @item.image.variant(resize: "500x")
+    .field
+      .label 文書
+      p.help.is-success ActionTextのデモ。入力任意。
+      .control
+        = f.rich_text_area :content
+    .field
+      .columns
+        = f.submit '保存', class: 'button is-primary is-large column'
