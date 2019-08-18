@@ -3,7 +3,7 @@
 コメントつきの写真をつくるアプリ
 
 # 説明
-* rails 6 beta 1
+* rails 6
 * 画像アップロード: ActionStorage
 * リッチテキスト: ActionText
 * CSS: [Bulma](https://bulma.io/)
