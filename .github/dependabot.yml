@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+      versioning-strategy: "lockfile-only"
