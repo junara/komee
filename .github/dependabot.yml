@@ -6,6 +6,6 @@ updates:
     schedule:
       interval: "weekly"
       day: "thursday"
-      time: "22:25"
+      time: "22:28"
       timezone: "Asia/Tokyo"
-      versioning-strategy: "lockfile-only"
+    versioning-strategy: "lockfile-only"
