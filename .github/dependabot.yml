@@ -6,6 +6,15 @@ updates:
     schedule:
       interval: "weekly"
       day: "thursday"
-      time: "22:28"
+      time: "23:26"
       timezone: "Asia/Tokyo"
     versioning-strategy: "lockfile-only"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+      time: "23:26"
+      timezone: "Asia/Tokyo"
+    versioning-strategy: "lockfile-only"
+    
