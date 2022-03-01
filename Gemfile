@@ -49,7 +49,7 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # for action text
-gem 'image_processing', '~> 1.0'
+gem 'image_processing', '~> 1.12'
 
 gem 'slim-rails'
 
